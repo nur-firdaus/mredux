@@ -4,6 +4,7 @@ import { StateType } from '../store/rootReducers';
 import { postsSlice } from '../store/slice/posts.slice';
 import { Spin, Card, Empty } from 'antd';
 import AppHeader from './AppHeader';
+import { issSlice } from '../store/slice/iss.slice';
 
 function Posts() {
   const { list } = useSelector((state: StateType) => state.posts);
@@ -12,6 +13,8 @@ function Posts() {
 
   useEffect(() => {
     dispatch(postsSlice.actions.getPostListAction());
+    dispatch(issSlice.actions.getIssAction());
+    
   }, [dispatch]);
 
   return (<>
