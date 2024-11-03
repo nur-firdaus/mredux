@@ -1,14 +1,10 @@
-import { PayloadAction } from '@reduxjs/toolkit';
-import { AxiosResponse } from 'axios';
-import { put, takeLatest } from 'redux-saga/effects';
-import { usersSlice } from '../slice/users.slice';
-import apiClient from '../../library/apiClient';
-import { ApiEndpoints } from '../../constant/ApiEndpoints';
-import {
-  GET_USER_BY_ID,
-  GET_USER_LIST,
-  UserType,
-} from '../../types/Usertype';
+import { PayloadAction } from "@reduxjs/toolkit";
+import { AxiosResponse } from "axios";
+import { put, takeLatest } from "redux-saga/effects";
+import { usersSlice } from "../slice/users.slice";
+import apiClient from "../../library/apiClient";
+import { ApiEndpoints } from "../../constant/ApiEndpoints";
+import { GET_USER_BY_ID, GET_USER_LIST, UserType } from "../../types/Usertype";
 
 function* getUserSaga({ payload: id }: PayloadAction<string>) {
   try {

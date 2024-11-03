@@ -1,16 +1,16 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { USERS, UsersStateType, UserType } from '../../types/Usertype';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { USERS, UsersStateType, UserType } from "../../types/Usertype";
 
 const usersInitialState: UsersStateType = {
   user: {
     data: null,
     isLoading: false,
-    errors: '' as unknown,
+    errors: "" as unknown,
   },
   list: {
     data: [],
     isLoading: false,
-    errors: '' as unknown,
+    errors: "" as unknown,
   },
 };
 
@@ -23,7 +23,7 @@ export const usersSlice = createSlice({
       { payload: _ }: PayloadAction<string>
     ) => {
       state.user.isLoading = true;
-      state.user.errors = '';
+      state.user.errors = "";
     },
     getUserSuccessAction: (
       state: UsersStateType,
@@ -41,7 +41,7 @@ export const usersSlice = createSlice({
     },
     getUserListAction: (state: UsersStateType) => {
       state.list.isLoading = true;
-      state.list.errors = '';
+      state.list.errors = "";
     },
     getUserListSuccessAction: (
       state: UsersStateType,

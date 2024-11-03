@@ -1,16 +1,16 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { POSTS, PostsStateType, PostType } from '../../types/PostType';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { POSTS, PostsStateType, PostType } from "../../types/PostType";
 
 const postsInitialState: PostsStateType = {
   post: {
     data: null,
     isLoading: false,
-    errors: '' as unknown,
+    errors: "" as unknown,
   },
   list: {
     data: [],
     isLoading: false,
-    errors: '' as unknown,
+    errors: "" as unknown,
   },
 };
 
@@ -23,7 +23,7 @@ export const postsSlice = createSlice({
       { payload: _ }: PayloadAction<string>
     ) => {
       state.post.isLoading = true;
-      state.post.errors = '';
+      state.post.errors = "";
     },
     getPostSuccessAction: (
       state: PostsStateType,
@@ -41,7 +41,7 @@ export const postsSlice = createSlice({
     },
     getPostListAction: (state: PostsStateType) => {
       state.list.isLoading = true;
-      state.list.errors = '';
+      state.list.errors = "";
     },
     getPostListSuccessAction: (
       state: PostsStateType,
